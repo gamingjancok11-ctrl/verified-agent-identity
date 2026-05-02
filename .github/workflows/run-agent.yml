@@ -14,9 +14,10 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          cd .agents/skills/verified-agent-identity
-          npm install
-          npm install @0xpolygonid/js-sdk
+          npm install -g @0xpolygonid/js-sdk
+
+      - name: Set NODE_PATH
+        run: echo "NODE_PATH=$(npm root -g)" >> $GITHUB_ENV
 
       - name: Run agent
         run: node .agents/skills/verified-agent-identity/scripts/createNewEthereumIdentity.js

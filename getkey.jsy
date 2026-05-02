@@ -1,0 +1,15 @@
+const { KeysFileStorage } = require('./.agents/skills/verified-agent-identity/scripts/shared/storage/keys');
+
+(async () => {
+  const storage = new KeysFileStorage();
+  console.log(await storage.list());
+})();
+const { KeysFileStorage } = require('./.agents/skills/verified-agent-identity/scripts/shared/storage/keys');
+
+(async () => {
+  const storage = new KeysFileStorage();
+  const keys = await storage.list();
+
+  console.log("RESULT:", keys);
+})();
+

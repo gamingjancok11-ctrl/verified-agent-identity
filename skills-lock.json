@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "verified-agent-identity": {
+      "source": "BillionsNetwork/verified-agent-identity",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "e2df7a0a52f7bd508e8174859db6f2220043bd8c73e96e102749424f5a7735ae"
+    }
+  }
+}

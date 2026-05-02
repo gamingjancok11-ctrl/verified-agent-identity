@@ -1,0 +1,23 @@
+name: Run Agent
+
+on:
+  workflow_dispatch:   # bisa dijalankan manual dari GitHub
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run agent script
+        run: node .agents/skills/verified-agent-identity/scripts/createNewEthereumIdentity.js

@@ -1,23 +1,4 @@
-jobs:
-  run-agent:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: |
-          npm install
-          npm install -g @0xpolygonid/js-sdk
-
-      - name: Set NODE_PATH
-        run: echo "NODE_PATH=$(npm root -g)" >> $GITHUB_ENV
-
-      - name: Run agent
-        run: node .agents/skills/verified-agent-identity/scripts/createNewEthereumIdentity.js
+- name: Setup Node.js
+  uses: actions/setup-node@v4
+  with:
+    node-version: 20

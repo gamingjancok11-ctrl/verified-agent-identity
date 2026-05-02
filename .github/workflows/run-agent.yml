@@ -14,6 +14,8 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
+          cd .agents/skills/verified-agent-identity
+          npm install
           npm install @0xpolygonid/js-sdk
 
       - name: Run agent
